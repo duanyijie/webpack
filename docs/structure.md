@@ -7,10 +7,18 @@
 ├── config/
 │   ├── index.js                # main project config
 │   └── ...
-├── src/
+├── client/
 │   ├── main.js                 # app entry file
-│   ├── App.vue                 # main app component
-│   ├── components/             # ui components
+│   ├── app.vue
+│   ├── views/                  # views file for router-view with components only for itself
+│   │   └── ...  
+│   ├── store/                  # store
+│   │   └── ...       
+│   ├── router/  
+│   │   └── ...                 # router
+│   ├── components/             # common components
+│   │   └── ...
+│   ├── utils/                  # common utils function
 │   │   └── ...
 │   └── assets/                 # module assets (processed by webpack)
 │       └── ...
@@ -47,7 +55,7 @@ This directory holds the actual configurations for both the development server a
 
 This is the main configuration file that exposes some of the most common configuration options for the build setup. See [API Proxying During Development](proxy.md) and [Integrating with Backend Framework](backend.md) for more details.
 
-### `src/`
+### `client/`
 
 This is where most of your application code will live in. How to structure everything inside this directory is largely up to you; if you are using Vuex, you can consult the [recommendations for Vuex applications](http://vuex.vuejs.org/en/structure.html).
 
